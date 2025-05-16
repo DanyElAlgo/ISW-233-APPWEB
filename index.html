@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./pages/index.css" />
+    <script src="index.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,6 +31,15 @@
       </header>
 
       <main id="container" class="container"></main>
+      <template id="card__container">
+        <article class="card">
+          <h3 class="card__title"></h3>
+          <div class="card__body">
+            <div class="card__body__image"></div>
+            <section class="card__body__content"></section>
+          </div>
+        </article>
+      </template>
 
       <footer class="footer">
         <div class="footer__content">

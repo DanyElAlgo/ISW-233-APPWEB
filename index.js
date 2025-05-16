@@ -1,23 +1,12 @@
 // TODO: Use the DOM API to create the card components
-const html = `<article class="card">
-<h3 class="card__title"></h3>
-<div class="card__body">
-  <div class='card__body__image'></div>
-  <section class='card__body__content'>
-  </section>
-</div>
-</article>`;
 
-// 1. Seleccione el container
+const container = document.getElementById("container");
+function createCardComponent(title, body) {
+  const template = document.getElementById("card__container");
+  const copy = template.content.cloneNode(true).firstElementChild;
+  copy.querySelector(".card__title").textContent = title;
+  copy.querySelector(".card__body__content").textContent = body;
+  container.appendChild(copy);
+}
 
-// 2. cree una funciotn createCardComponent.
-/**
- * @param {string} title
- * @param {string} body
- *
- * @return {HTMLElement}
- */
-
-// 3. Cree un componente
-
-// 4. Agrege este nuevo componente al container
+createCardComponent("Título 1", "Desc. 1");

@@ -1,0 +1,4 @@
+.nav__links{
+    display: flex;
+    gap: 5rem;
+}
