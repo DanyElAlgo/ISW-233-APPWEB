@@ -1,5 +1,5 @@
 import { Command, CommandExecutor, Commands } from "./services/command.js";
-import { TodoList } from "./services/todoList.js";
+import { TodoList } from "./services/todolist.js";
 
 globalThis.DOM = {};
 
