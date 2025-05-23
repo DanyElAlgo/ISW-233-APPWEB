@@ -8,7 +8,7 @@ export async function addToCart(id) {
       p.product.id == id ? { ...p, quantity: p.quantity + 1 } : p
     );
   } else {
-    // app.store.cart.push wrong!
+    // app.store.cart.push(results);
     app.store.cart = [...app.store.cart, { product, quantity: 1 }];
   }
 }
