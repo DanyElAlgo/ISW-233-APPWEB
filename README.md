@@ -1,9 +1,12 @@
 # Aplicaciones Web I - Ejercicio Observer
 
-1. Using our last example create a horizontal card 
-  - Change the styles of the cards so they are styled in a horizontal way
-2. When scrolling to the bottom should be loaded new entries without clicking a button
-3. Simulate an infinite scrolling 
+1. Add contenteditable attribute to section with a class name card__body__content
+2. Create a MutationObserver with the following parameters that would allow us to track text changes in TextNodes:
+  - characterData: true
+  - subtree: true 
+3. Implement callback for MutationObserver
+4. Observer text section for each card
+5. Use single observer for all rendered card 
 
 Use the db file and the mockDB for generating fake data. for example:
 
