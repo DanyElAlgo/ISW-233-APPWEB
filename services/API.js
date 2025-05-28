@@ -9,4 +9,9 @@ export const API = {
     const response = await fetch(API.urlRestaurants);
     return await response.json();
   },
+  urlHighlights: "./data/highlights.json",
+  getHighlights: async() => {
+    const response = await fetch(API.urlHighlights);
+    return await response.json();
+  }
 };

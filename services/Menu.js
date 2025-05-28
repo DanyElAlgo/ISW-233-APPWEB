@@ -8,6 +8,10 @@ export async function loadRestaurants() {
   app.store.menu = await API.getRestaurants();
 }
 
+export async function loadHighlights() {
+  app.store.menu = await API.getHighlights();
+}
+
 export async function getProductById(id) {
   if (app.store.menu == null) {
     await loadData();
