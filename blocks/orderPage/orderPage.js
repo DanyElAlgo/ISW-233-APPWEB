@@ -1,3 +1,5 @@
+import { cleanCart } from "../../services/Order.js";
+
 export class OrderPage extends HTMLElement {
   constructor() {
     super();
@@ -7,7 +9,7 @@ export class OrderPage extends HTMLElement {
     this.root.appendChild(styles);
 
     async function loadCSS() {
-      const request = await fetch("/blocks/orderPage/orderPage.css"); 
+      const request = await fetch("/blocks/orderPage/orderPage.css");
       //TODO: Cambiar
       const css = await request.text();
       styles.textContent = css;
@@ -16,13 +18,10 @@ export class OrderPage extends HTMLElement {
   }
 
   // when the component is attached to the DOM
-  connectedCallback() {
+connectedCallback() {
     const template = document.getElementById("menu-page-template");
     const content = template.content.cloneNode(true);
     this.root.appendChild(content);
-    console.log(app.store.cart);
-
-    
 
     window.addEventListener("appmenuchange", () => {
       this.render();
@@ -30,22 +29,33 @@ export class OrderPage extends HTMLElement {
     window.addEventListener("appcartchange", () => {
       this.render();
     });
+
+    this.root.addEventListener("click", (event) => {
+      if (event.target.classList.contains("confirm-order")) {
+        cleanCart();
+        app.router.go("/products");
+        event.preventDefault();
+      }
+    });
+
     this.render();
-    
-  }
+}
 
   render() {
-    if (app.store.cart && app.store.cart.length > 0) { // Verificar que el carrito tenga items
+    let total = 0;
+    if (app.store.cart && app.store.cart.length > 0) {
+
       this.root.querySelector("#menu").innerHTML = "";
       for (let product of app.store.cart) {
         const item = document.createElement("order-item");
         item.dataset.product = JSON.stringify(product);
         this.root.querySelector("#menu").appendChild(item);
+        total += product.quantity * product.product.price;
       }
-      
+
       const lower = this.root.querySelector("#lower");
       if (lower) {
-        lower.innerHTML = `<button class="confirm-order">Order Now!</button>`;
+        lower.innerHTML = `<p>Total: \$${total.toFixed(2)}</p><button class="confirm-order">Order Now!</button>`;
       }
     } else {
       this.root.querySelector("#menu").innerHTML = "Your cart is empty";

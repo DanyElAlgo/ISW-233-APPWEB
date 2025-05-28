@@ -101,6 +101,31 @@
       </div>
     </template>
 
+    <template id="product-template">
+      <div class="product">
+        <div class="product__image-container">
+          <img
+            src="https://placehold.co/600x400/E2E8F0/A0AEC0?text=Product+Image"
+            alt="Product Name"
+            class="product__image"
+          />
+        </div>
+
+        <h3 class="product__title"></h3>
+        <p class="product__description"></p>
+        <p class="product__price"></p>
+        <p class="product__quantity">Quantity: 
+          <input
+            type="number"
+            class="product__quantity-input"
+            min="1"
+            value="1"
+            max="99">
+        </p>
+        <button class="product__add-button">Add to Cart</button>
+      </div>
+    </template>
+
     <template id="restaurant-card-template">
       <div class="restaurant-card">
         <div class="restaurant-card__image-container">

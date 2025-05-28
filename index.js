@@ -12,6 +12,8 @@ import { RestaurantPage } from "./blocks/restaurantPage/restaurantPage.js";
 import { OrderPage } from "./blocks/orderPage/orderPage.js";
 import OrderItem from "./blocks/orderItem/orderItem.js";
 
+import ProductPage from "./blocks/productPage/productPage.js";
+
 globalThis.app = {};
 
 app.store = Store;

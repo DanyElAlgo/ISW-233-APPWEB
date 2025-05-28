@@ -17,19 +17,17 @@ export default class OrderItem extends HTMLElement {
 
       this.querySelector("h3").textContent = product.name;
       this.querySelector("img").src = `${product.imageUrl}`;
-      this.querySelector("p.order-item__price").textContent = `${product.price}`;
+      this.querySelector("p.order-item__price").textContent = `\$${product.price}`;
       this.querySelector("p.order-item__quantity").textContent = `${quantity}`;
 
       this.querySelector(".order-item").addEventListener("click", (event) => {
         if (event.target.className.toLowerCase() == "order-item__button--add") {
-          addToCart(product.id);
+          addToCart(product.id, 1);
         } else if (event.target.className.toLowerCase() == "order-item__button") {
           removeFromCart(product.id);
         }
         event.preventDefault();
       });
-    } else {
-      console.log("Carrito vacío :c");
     }
   }
 }
