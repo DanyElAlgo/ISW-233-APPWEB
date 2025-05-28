@@ -1,10 +1,16 @@
 import Router from "./services/Router.js";
 
 import Store from "./services/store.js";
-import { loadData } from "./services/Menu.js";
+import { loadData, loadRestaurants } from "./services/Menu.js";
 
 import { MenuPage } from "./blocks/menuPage/menuPage.js";
 import ProductItem from "./blocks/productItem/productItem.js";
+
+import RestaurantItem from "./blocks/restaurantItem/restaurantItem.js";
+import { RestaurantPage } from "./blocks/restaurantPage/restaurantPage.js";
+
+import { OrderPage } from "./blocks/orderPage/orderPage.js";
+import OrderItem from "./blocks/orderItem/orderItem.js";
 
 globalThis.app = {};
 
@@ -12,8 +18,15 @@ app.store = Store;
 app.router = Router;
 
 window.addEventListener("DOMContentLoaded", () => {
-  loadData();
   app.router.init();
+});
+
+window.addEventListener("loadProducts", () => {
+  loadData();
+});
+
+window.addEventListener("loadRestaurants", () => {
+  loadRestaurants();
 });
 
 window.addEventListener("appcartchange", (event) => {

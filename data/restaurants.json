@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "https://media.gettyimages.com/id/458406353/es/foto/burger-king.jpg?s=612x612&w=0&k=20&c=8I8p7cotPS5U-rMVUF9LJ6LC-8tQ-5tJ35BH_wvfgzk=",
+    "altText": "Burger King",
+    "title": "Burger King",
+    "description": "Hamburguesas, papas fritas y bebidas.",
+    "address": ""
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://media.gettyimages.com/id/2163067200/es/foto/burbank-california-the-mcdonalds-logo-is-displayed-at-a-mcdonalds-restaurant-on-july-22-2024.jpg?s=612x612&w=0&k=20&c=xE5-Yzn73nm0yCiqeOr8ioqcirf2acoqor_hweR_6LU=",
+    "altText": "McDonald's",
+    "title": "McDonald's",
+    "description": "Hamburguesas, papas fritas y bebidas.",
+    "address": ""
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://media.gettyimages.com/id/458641929/es/foto/caf%C3%A9-starbucks-para-colgar-se%C3%B1ales-fuera-de-una-tienda.jpg?s=612x612&w=0&k=20&c=fJBHbwfQu2bixPQfN3vjXDn09Pd5QWd-TLj0Lg7JPXA=",
+    "altText": "Starbucks",
+    "title": "Starbucks",
+    "description": "Qué es un Starbucks?",
+    "address": ""
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://polloscampeon.com/wp-content/uploads/2021/07/Grigota-Center-0-768x228.jpg",
+    "altText": "Pollos Campeón",
+    "title": "Pollos Campeón",
+    "description": "Los pollos que venden en este sitio son muy deliciosos, los recomiendo, jeje.",
+    "address": ""
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://pedidosya.dhmedia.io/image/pedidosya/restaurants/pizza-rio-sirari4ovon1logo.jpg",
+    "altText": "Pizza Río",
+    "title": "Pizza Río",
+    "description": "Aquí hacen pizzas riquísimas, pero solo se venden por caja entera, no por porción. :c",
+    "address": ""
+  }
+]

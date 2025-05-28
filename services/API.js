@@ -4,4 +4,9 @@ export const API = {
     const response = await fetch(API.url);
     return await response.json();
   },
+  urlRestaurants: "./data/restaurants.json",
+  getRestaurants: async () => {
+    const response = await fetch(API.urlRestaurants);
+    return await response.json();
+  },
 };

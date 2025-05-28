@@ -13,4 +13,17 @@ export async function addToCart(id) {
   }
 }
 
-export function removeFromCart(id) {}
+export async function removeFromCart(id) {
+  const results = app.store.cart.filter((productInCart) => productInCart.product.id == id);
+  if (results.length == 1) {
+    const product = results[0];
+    if (product.quantity > 1) {
+      app.store.cart = app.store.cart.map((p) =>
+        p.product.id == id ? { ...p, quantity: p.quantity - 1 } : p
+      );
+    } else {
+      app.store.cart = app.store.cart.filter((p) => p.product.id != id);
+    }
+  }
+}
+

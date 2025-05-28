@@ -79,6 +79,7 @@
     <template id="menu-page-template">
       <section>
         <ul id="menu"></ul>
+        <div id="lower"></div>
       </section>
     </template>
 
@@ -99,5 +100,43 @@
         <button class="product-card__add-button">Add to Cart</button>
       </div>
     </template>
+
+    <template id="restaurant-card-template">
+      <div class="restaurant-card">
+        <div class="restaurant-card__image-container">
+          <img
+            src="https://placehold.co/600x400/E2E8F0/A0AEC0?text=Product+Image"
+            alt="Restaurant Name"
+            class="restaurant-card__image"
+          />
+        </div>
+
+        <h3 class="restaurant-card__title"></h3>
+        <p class="restaurant-card__description"></p>
+        <p class="restaurant-card__price"></p>
+
+        <button class="restaurant-card__info-button">More info.</button>
+      </div>
+    </template>
+
+    <template id="order-template">
+      <div class="order-item">
+        <div class="order-item__image-container">
+          <img
+            src="https://placehold.co/600x400/E2E8F0/A0AEC0?text=Product+Image"
+            alt="Product Name"
+            class="order-item__image"
+          />
+        </div>
+
+        <h3 class="order-item__title"></h3>
+        <p class="order-item__price"></p>
+
+        <button class="order-item__button">-</button>
+        <p class="order-item__quantity"></p>
+        <button class="order-item__button--add">+</button>
+      </div>
+    </template>
+
   </body>
 </html>

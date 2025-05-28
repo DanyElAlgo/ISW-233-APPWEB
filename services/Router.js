@@ -21,17 +21,18 @@ const Router = {
     switch (route) {
       case "/":
         pageElement = document.createElement("menu-page");
+        window.dispatchEvent(new Event("loadProducts"));
         break;
       case "/products":
         pageElement = document.createElement("menu-page");
+        window.dispatchEvent(new Event("loadProducts"));
         break;
       case "/restaurants":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Restaurants Page";
+        pageElement = document.createElement("restaurant-page");
+        window.dispatchEvent(new Event("loadRestaurants"));
         break;
       case "/order":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Order Page";
+        pageElement = document.createElement("order-page")
         break;
       default:
         if (route.startsWith("/products/")) {
