@@ -1,12 +1,4 @@
-```
-sample: Object
-for instance: 
-{
-  title: asdasd,
-  name: asdasd
-  price: 123
-}
-```;
+
 function initMockDB(sample, count = 100, page = 10) {
   let data = Array.from({ length: count }, (_, i) => {
     return Object.fromEntries(Object.entries(sample).map(([k, v]) => [k, `[Entry ${i}] - ${v}`]));
@@ -28,3 +20,5 @@ function initMockDB(sample, count = 100, page = 10) {
     next: () => getResult(index + 1),
   };
 }
+
+export default initMockDB;

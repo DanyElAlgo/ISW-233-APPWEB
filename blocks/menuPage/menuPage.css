@@ -1,7 +1,5 @@
 #menu {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -25,8 +23,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   cursor: pointer;
-  width: 100%;
-  max-width: 20rem;
 }
 
 .product-card:hover {
@@ -122,6 +118,6 @@
 
 @media (min-width: 640px) {
   .product-card {
-    max-width: 24rem;
+    min-width: 640px
   }
 }
