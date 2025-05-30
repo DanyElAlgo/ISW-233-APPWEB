@@ -20,7 +20,6 @@ const Router = {
     let pageElement = null;
     switch (route) {
       case "/":
-        pageElement = document.createElement("menu-page");
         break;
       case "/products":
         pageElement = document.createElement("menu-page");
